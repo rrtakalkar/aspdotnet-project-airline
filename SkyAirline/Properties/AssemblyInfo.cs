@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SkyAirline")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NICE Systems")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SkyAirline")]
-[assembly: AssemblyCopyright("Copyright © NICE Systems 2022")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("84e803de-a392-4b6c-9160-2dd801887f92")]
+[assembly: Guid("8d5b2d62-7f65-4758-8cf6-17b6d9580b7e")]
 
 // Version information for an assembly consists of the following four values:
 //

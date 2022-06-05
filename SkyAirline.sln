@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.2.32516.85
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyAirline", "SkyAirline\SkyAirline.csproj", "{84E803DE-A392-4B6C-9160-2DD801887F92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyAirline", "SkyAirline\SkyAirline.csproj", "{8D5B2D62-7F65-4758-8CF6-17B6D9580B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84E803DE-A392-4B6C-9160-2DD801887F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84E803DE-A392-4B6C-9160-2DD801887F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84E803DE-A392-4B6C-9160-2DD801887F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84E803DE-A392-4B6C-9160-2DD801887F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5B2D62-7F65-4758-8CF6-17B6D9580B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5B2D62-7F65-4758-8CF6-17B6D9580B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5B2D62-7F65-4758-8CF6-17B6D9580B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5B2D62-7F65-4758-8CF6-17B6D9580B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {14CFBF93-0847-480D-B62B-8D4CF6D0C3BC}
+		SolutionGuid = {7B2EF499-D454-4927-B0D9-279AFDDDEC3A}
 	EndGlobalSection
 EndGlobal

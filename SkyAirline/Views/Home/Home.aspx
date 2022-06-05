@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Views/Shared/SkyAirlineSite.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="SkyAirline.Views.Home.Home" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Views/Master/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="SkyAirline._Default" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-     <div class="card" style="height: 200px; background-color: rgba(255,255,255,0.7);">
+    <div class="card" style="height: 200px; background-color: rgba(255,255,255,0.7);">
         <div class="card-body">
             
         </div>
@@ -56,4 +56,5 @@
 
         </div>
     </div>
+
 </asp:Content>
