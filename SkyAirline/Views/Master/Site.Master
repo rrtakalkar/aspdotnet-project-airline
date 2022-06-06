@@ -55,9 +55,19 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/Views/Home/Home.aspx">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/Views/City/Cities.aspx">City</a>
-                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Models
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="/Views/City/Cities.aspx">City</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="/Views/Airport/Airports.aspx">Airport</a>
+                                </li>                             
+                              </ul>
+                            </li>                            
                         </ul>
                         
                         <asp:LoginView runat="server" ViewStateMode="Disabled">

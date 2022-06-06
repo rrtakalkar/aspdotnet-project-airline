@@ -18,7 +18,7 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-            context.Cities.AddOrUpdate(
+            /*context.Cities.AddOrUpdate(
                  new Models.City
                  {
                      CityName = "Delhi",
@@ -46,7 +46,7 @@
                  }
             );
 
-            context.SaveChanges();
+            context.SaveChanges();*/
         }
     }
 }

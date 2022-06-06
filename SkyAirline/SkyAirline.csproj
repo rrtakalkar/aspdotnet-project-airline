@@ -180,6 +180,8 @@
     <Content Include="Images\experience-dreamliner.png" />
     <Content Include="Images\flying-returns.png" />
     <Content Include="Images\maha-scholar.png" />
+    <Content Include="Views\Airport\AddAirport.aspx" />
+    <Content Include="Views\Airport\Airports.aspx" />
     <Content Include="Views\City\AddCity.aspx" />
     <Content Include="Views\City\Cities.aspx" />
     <Content Include="Views\Home\About.aspx" />
@@ -254,6 +256,7 @@
     <Content Include="Views\Master\Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AirportBL.cs" />
     <Compile Include="BLL\CityBL.cs" />
     <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
       <DependentUpon>Default.ascx</DependentUpon>
@@ -416,9 +419,9 @@
     <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
       <DependentUpon>Url_Edit.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206041658493_initial.cs" />
-    <Compile Include="Migrations\202206041658493_initial.designer.cs">
-      <DependentUpon>202206041658493_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202206061217276_initial.cs" />
+    <Compile Include="Migrations\202206061217276_initial.designer.cs">
+      <DependentUpon>202206061217276_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SkyAirlineModels.cs" />
@@ -528,6 +531,20 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Views\Airport\AddAirport.aspx.cs">
+      <DependentUpon>AddAirport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Airport\AddAirport.aspx.designer.cs">
+      <DependentUpon>AddAirport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Airport\Airports.aspx.cs">
+      <DependentUpon>Airports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Airport\Airports.aspx.designer.cs">
+      <DependentUpon>Airports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\City\AddCity.aspx.cs">
       <DependentUpon>AddCity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -616,8 +633,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202206041658493_initial.resx">
-      <DependentUpon>202206041658493_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206061217276_initial.resx">
+      <DependentUpon>202206061217276_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
