@@ -28,7 +28,11 @@ namespace SkyAirline.Views.Airport
 
         protected void addAirportForm_Click(object sender, EventArgs e)
         {
-            var airport = new SkyAirline.Models.Airport() { AirportCode = AirportCode.Text, CityID =  City.SelectedIndex};
+            var airport = new SkyAirline.Models.Airport()
+            {
+                AirportCode = AirportCode.Text,
+                CityID = int.Parse(City.SelectedItem.Value),
+            };
 
             if (ModelState.IsValid)
             {

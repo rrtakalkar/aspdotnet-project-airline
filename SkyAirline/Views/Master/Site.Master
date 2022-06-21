@@ -55,9 +55,10 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/Views/Home/Home.aspx">Home</a>
                             </li>
+                            <asp:PlaceHolder runat="server" ID="AdminMessagePanel">
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Models
+                                Administration
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
@@ -65,27 +66,32 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item" aria-current="page" href="/Views/Airport/Airports.aspx">Airport</a>
-                                </li>                             
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="/Views/Flight/Flights.aspx">Flight</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="/Views/Schedule/Schedules.aspx">Schedule</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="/Views/Passenger/Passengers.aspx">Passenger</a>
+                                </li>
                               </ul>
-                            </li>                            
+                            </li>
+                            </asp:PlaceHolder>
                         </ul>
-                        
-                        <asp:LoginView runat="server" ViewStateMode="Disabled">
-                            <AnonymousTemplate>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Account/Register"><i class="bi bi-person"></i> Register</a></li>
-                                    <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Account/Login"><i class="bi bi-box-arrow-in-right"></i> Log in</a></li>
-                                </ul>
-                            </AnonymousTemplate>
-                            <LoggedInTemplate>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="nav-item"><a class="nav-link" runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                    <li class="nav-item">
-                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                    </li>
-                                </ul>
-                            </LoggedInTemplate>
-                        </asp:LoginView>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <asp:PlaceHolder runat="server" ID="AnonymousMessagePanel">                             
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Passenger/Register"><i class="bi bi-person"></i> Register</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Passenger/Login"><i class="bi bi-box-arrow-in-right"></i> Log in</a></li>                            
+                            </asp:PlaceHolder>
+                            <asp:PlaceHolder runat="server" ID="AuthenticatedMessagePanel">                            
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Passenger/Profile" title="Manage your account">Hello, <%: Session["UserName"]  %> !</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Passenger/Logout"><i class="bi bi-box-arrow-in-right"></i> Log out</a></li>                              
+                            </asp:PlaceHolder>
+                        </ul>
+                                                
                     </div>
                 </div>
             </nav>

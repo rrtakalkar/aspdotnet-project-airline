@@ -69,7 +69,25 @@ namespace SkyAirline
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null) 
+            {
+                AuthenticatedMessagePanel.Visible = true;
+                AnonymousMessagePanel.Visible = false;
+            }
+            else
+            {
+                AuthenticatedMessagePanel.Visible = false;
+                AnonymousMessagePanel.Visible = true;
+            }
 
+            if (Session["Admin"] == null)
+            {
+                AdminMessagePanel.Visible = false;
+            }
+            else
+            {
+                AdminMessagePanel.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

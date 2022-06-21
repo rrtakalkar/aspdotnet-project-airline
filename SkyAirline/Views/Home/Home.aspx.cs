@@ -11,7 +11,8 @@ namespace SkyAirline
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UserMessagePanel.Visible = Session["UserName"] != null && Session["Admin"] == null;
+            AdminMessagePanel.Visible = Session["Admin"] != null;
         }
     }
 }

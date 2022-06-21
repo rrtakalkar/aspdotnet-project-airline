@@ -13,7 +13,7 @@
             <asp:ValidationSummary runat="server" CssClass="text-danger" />
 
             <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="CityName" CssClass="col-md-2 control-label">City Name</asp:Label>
+                <asp:Label runat="server" AssociatedControlID="CityName" CssClass="col-md-10 control-label">City Name</asp:Label>
                 <div class="col-md-10">
                     <asp:TextBox runat="server" ID="CityName" CssClass="form-control" TextMode="SingleLine" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="CityName"
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="Country" CssClass="col-md-2 control-label">Country</asp:Label>
+                <asp:Label runat="server" AssociatedControlID="Country" CssClass="col-md-10 control-label">Country</asp:Label>
                 <div class="col-md-10">
                     <asp:DropDownList runat="server" ID="Country"  CssClass="form-control"/>             
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Country"

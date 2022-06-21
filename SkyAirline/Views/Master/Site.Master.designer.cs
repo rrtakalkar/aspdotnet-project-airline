@@ -7,11 +7,40 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SkyAirline {
-    
-    
-    public partial class SiteMaster {
-        
+namespace SkyAirline
+{
+
+
+    public partial class SiteMaster
+    {
+
+        /// <summary>
+        /// AdminMessagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AdminMessagePanel;
+
+        /// <summary>
+        /// AnonymousMessagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AnonymousMessagePanel;
+
+        /// <summary>
+        /// AuthenticatedMessagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AuthenticatedMessagePanel;
+
         /// <summary>
         /// MainContent control.
         /// </summary>

@@ -184,6 +184,8 @@
     <Content Include="Views\Airport\Airports.aspx" />
     <Content Include="Views\City\AddCity.aspx" />
     <Content Include="Views\City\Cities.aspx" />
+    <Content Include="Views\Flight\AddFlight.aspx" />
+    <Content Include="Views\Flight\Flights.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Account\AddPhoneNumber.aspx" />
     <Content Include="Views\Account\Confirm.aspx" />
@@ -251,6 +253,17 @@
     <Content Include="Views\Home\Home.aspx" />
     <Content Include="Views\Master\Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Passenger\Login.aspx" />
+    <Content Include="Views\Passenger\Logout.aspx" />
+    <Content Include="Views\Passenger\Passengers.aspx" />
+    <Content Include="Views\Passenger\Profile.aspx" />
+    <Content Include="Views\Passenger\Register.aspx" />
+    <Content Include="Views\Schedule\AddSchedule.aspx" />
+    <Content Include="Views\Schedule\Schedules.aspx" />
+    <Content Include="Views\Search\BookTicket.aspx" />
+    <Content Include="Views\Search\MyBookings.aspx" />
+    <Content Include="Views\Search\SearchFlights.aspx" />
+    <Content Include="Views\Search\ViewTicket.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Views\Master\Site.Mobile.Master" />
@@ -258,6 +271,9 @@
   <ItemGroup>
     <Compile Include="BLL\AirportBL.cs" />
     <Compile Include="BLL\CityBL.cs" />
+    <Compile Include="BLL\FlightBL.cs" />
+    <Compile Include="BLL\PassengerBL.cs" />
+    <Compile Include="BLL\ScheduleBL.cs" />
     <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
       <DependentUpon>Default.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -419,9 +435,17 @@
     <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
       <DependentUpon>Url_Edit.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206061217276_initial.cs" />
-    <Compile Include="Migrations\202206061217276_initial.designer.cs">
-      <DependentUpon>202206061217276_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202206200243420_initial.cs" />
+    <Compile Include="Migrations\202206200243420_initial.designer.cs">
+      <DependentUpon>202206200243420_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206201310369_availableseats.cs" />
+    <Compile Include="Migrations\202206201310369_availableseats.designer.cs">
+      <DependentUpon>202206201310369_availableseats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206210424215_classfare.cs" />
+    <Compile Include="Migrations\202206210424215_classfare.designer.cs">
+      <DependentUpon>202206210424215_classfare.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SkyAirlineModels.cs" />
@@ -559,6 +583,20 @@
     <Compile Include="Views\City\Cities.aspx.designer.cs">
       <DependentUpon>Cities.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Flight\AddFlight.aspx.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Flight\AddFlight.aspx.designer.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Flight\Flights.aspx.cs">
+      <DependentUpon>Flights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Flight\Flights.aspx.designer.cs">
+      <DependentUpon>Flights.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -617,6 +655,83 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Passenger\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Passenger\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Passenger\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Passenger\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Passenger\Passengers.aspx.cs">
+      <DependentUpon>Passengers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Passenger\Passengers.aspx.designer.cs">
+      <DependentUpon>Passengers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Passenger\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Passenger\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Passenger\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Passenger\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Schedule\AddSchedule.aspx.cs">
+      <DependentUpon>AddSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Schedule\AddSchedule.aspx.designer.cs">
+      <DependentUpon>AddSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Schedule\Schedules.aspx.cs">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Schedule\Schedules.aspx.designer.cs">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search\BookTicket.aspx.cs">
+      <DependentUpon>BookTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search\BookTicket.aspx.designer.cs">
+      <DependentUpon>BookTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search\MyBookings.aspx.cs">
+      <DependentUpon>MyBookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search\MyBookings.aspx.designer.cs">
+      <DependentUpon>MyBookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search\SearchFlights.aspx.cs">
+      <DependentUpon>SearchFlights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search\SearchFlights.aspx.designer.cs">
+      <DependentUpon>SearchFlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search\ViewTicket.aspx.cs">
+      <DependentUpon>ViewTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search\ViewTicket.aspx.designer.cs">
+      <DependentUpon>ViewTicket.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -633,8 +748,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202206061217276_initial.resx">
-      <DependentUpon>202206061217276_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206200243420_initial.resx">
+      <DependentUpon>202206200243420_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201310369_availableseats.resx">
+      <DependentUpon>202206201310369_availableseats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206210424215_classfare.resx">
+      <DependentUpon>202206210424215_classfare.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

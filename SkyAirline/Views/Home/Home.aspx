@@ -3,8 +3,31 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="card" style="height: 200px; background-color: rgba(255,255,255,0.7);">
-        <div class="card-body">
-            
+        <div class="card-body">                       
+            <asp:PlaceHolder runat="server" ID="AdminMessagePanel">
+               <div class="row">
+                    <div class="col text-center">
+                         <h1>Welcome to SkyAirlines</h1>
+                    </div>
+                </div>
+            </asp:PlaceHolder>
+            <asp:PlaceHolder runat="server" ID="UserMessagePanel">
+                <div class="row">
+                    <div class="col text-center">  
+                        <h1>Welcome to SkyAirlines</h1>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-center text-center">
+                        <asp:HyperLink NavigateUrl="~/Views/Search/SearchFlights" Text="Search Flights" runat="server" CssClass="btn btn-primary"/>
+                    </div>
+                    <div class="col d-flex justify-content-center text-center">
+                        <asp:HyperLink NavigateUrl="~/Views/Search/MyBookings" Text="View My Bookings" runat="server" CssClass="btn btn-primary"/>
+                    </div>
+                </div>                               
+            </asp:PlaceHolder>
         </div>
     </div>
 
